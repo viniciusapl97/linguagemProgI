@@ -33,32 +33,25 @@ def calculadora():
 
         escolha = int(input("Digite o número da operação desejada:"))
        
-        
+        num1 = int(input("Digite o primeiro número:"))
+        num2 = int(input("Digite o segundo número:"))
 
         
         match escolha:
 
-            case 1:
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:"))            
+            case 1:            
                 resultado = soma(num1,num2)
                 print(f"O resultado da adição é: {resultado}")
 
             case 2:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
                 resultado = subtracao(num1,num2)
                 print(f"O resultado da subtração é: {resultado}")
 
             case 3:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
                 resultado = multiplicacao(num1,num2)
                 print(f"O resultado da multiplicação é: {resultado}")
 
             case 4:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
                 resultado = divisao(num1,num2)
                 print(f"O resultado da divisão é: {resultado}")
 
