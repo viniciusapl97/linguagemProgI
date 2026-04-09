@@ -1,5 +1,3 @@
-package aula4.java_logic;
-
 import java.util.Scanner;
 
 public class CadastroEstoque {
