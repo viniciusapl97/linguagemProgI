@@ -1,26 +1,27 @@
 #include <iostream>
-#include <iomanip>
-using namespace std;
+using namespace std; // Evita ter que escrever std:: toda hora
 
 int main() {
-
-    int numero1 = 0, numero2 = 0, soma, subtracao, multiplicacao;
-    float divisao;
-
-    cout << "Digite o primeiro numero: "; cin >> nuemro1;
-    cout << "Digite o segundo numero: "; cin >> numero2;
-
-    soma = numero1 + numero2;
-    subtracao = numero1 - numero2;
-    multiplicacao = numero1 * numero2;
-    divisao = numero1 / numero2;
+    // Alocando variáveis na memória antes de usar (característica de linguagens robustas)
+    double num1, num2;
     
-    cout << fixed << setprecision(2);
-    cout << "Soma: " << soma << endl;
-    cout << "Subtracao: " << subtracao << endl;
-    cout << "Multiplicacao: " << multiplicacao << endl;
-    cout << "Divisao: " << divisao << endl;
-
-    return 0;
-
+    cout << "--- Calculadora Basica ---" << endl;
+    cout << "Digite o primeiro numero: ";
+    cin >> num1; // Extrai o valor digitado para a variável
+    
+    cout << "Digite o segundo numero: ";
+    cin >> num2;
+    
+    cout << "Soma: " << (num1 + num2) << endl;
+    cout << "Subtracao: " << (num1 - num2) << endl;
+    cout << "Multiplicacao: " << (num1 * num2) << endl;
+    
+    // Tratamento sequencial contra quebra por divisão por zero
+    if (num2 == 0) {
+        cout << "Erro: Nao e possivel realizar divisao por zero!" << endl;
+    } else {
+        cout << "Divisao: " << (num1 / num2) << endl;
+    }
+    
+    return 0; // Indica pro SO que a execução ocorreu sem erros
 }

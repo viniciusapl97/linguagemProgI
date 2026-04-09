@@ -1,72 +1,18 @@
-from unittest import case
-
-
-
-def soma(num1,num2):
-    return num1 + num2
-
-def subtracao(num1,num2):
-    return num1 - num2  
-
-def multiplicacao(num1,num2):
-    return num1 * num2
-
-def divisao(num1,num2):
-    if num2 != 0:
-        return num1 / num2
-    else:
-        return "Erro: Divisão por zero não é permitida."
-
-
 def calculadora():
-    calc=True
+    print("--- Calculadora Básica ---")
+    # Cast para float já que o input sempre retorna texto (str)
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
     
-
-    while calc==True:
-
-        print("Escolha a operação:")
-        print("1 - Adição")
-        print("2 - Subtração")  
-        print("3 - Multiplicação")  
-        print("4 - Divisão")    
-        print("5 - Encerrar")  
-
-        escolha = int(input("Digite o número da operação desejada:"))
-       
-        
-
-        
-        match escolha:
-
-            case 1:
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:"))            
-                resultado = soma(num1,num2)
-                print(f"O resultado da adição é: {resultado}")
-
-            case 2:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
-                resultado = subtracao(num1,num2)
-                print(f"O resultado da subtração é: {resultado}")
-
-            case 3:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
-                resultado = multiplicacao(num1,num2)
-                print(f"O resultado da multiplicação é: {resultado}")
-
-            case 4:            
-                num1 = int(input("Digite o primeiro número:"))
-                num2 = int(input("Digite o segundo número:")) 
-                resultado = divisao(num1,num2)
-                print(f"O resultado da divisão é: {resultado}")
-
-            case 5:
-                print("Encerrando a calculadora. Até mais!")
-                calc=False
-                
-
-
+    # Operações aritméticas básicas do roteiro
+    print(f"Soma: {num1 + num2}")
+    print(f"Subtração: {num1 - num2}")
+    print(f"Multiplicação: {num1 * num2}")
+    
+    # Validação para evitar o erro fatal de divisão por zero
+    if num2 == 0:
+        print("Erro: Não é possível realizar divisão por zero!")
+    else:
+        print(f"Divisão: {num1 / num2}")
 
 calculadora()
